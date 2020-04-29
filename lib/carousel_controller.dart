@@ -44,6 +44,8 @@ class CarouselControllerImpl implements CarouselController {
   /// The animation lasts for the given duration and follows the given curve.
   /// The returned [Future] resolves when the animation completes.
   Future<void> nextPage({Duration duration, Curve curve}) {
+    var test = await _state;
+    print(test);
     return _state.pageController.nextPage(duration: duration, curve: curve);
   }
 
